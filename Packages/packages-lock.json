@@ -1,11 +1,19 @@
 {
   "dependencies": {
     "com.unity.2d.animation": {
+<<<<<<< HEAD
       "version": "7.0.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.2d.common": "6.0.6",
+=======
+      "version": "7.0.7",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.2d.common": "6.0.4",
+>>>>>>> ad75674f1b9326e6c28773702400a62701593195
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.uielements": "1.0.0"
@@ -13,7 +21,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.common": {
+<<<<<<< HEAD
       "version": "6.0.6",
+=======
+      "version": "6.0.4",
+>>>>>>> ad75674f1b9326e6c28773702400a62701593195
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -32,19 +44,32 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.pixel-perfect": {
+<<<<<<< HEAD
       "version": "5.0.3",
+=======
+      "version": "5.0.1",
+>>>>>>> ad75674f1b9326e6c28773702400a62701593195
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.psdimporter": {
+<<<<<<< HEAD
       "version": "6.0.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.2d.animation": "7.0.8",
         "com.unity.2d.common": "6.0.5",
+=======
+      "version": "6.0.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.2d.animation": "7.0.7",
+        "com.unity.2d.common": "6.0.4",
+>>>>>>> ad75674f1b9326e6c28773702400a62701593195
         "com.unity.2d.sprite": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -83,7 +108,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
+<<<<<<< HEAD
       "version": "1.17.7",
+=======
+      "version": "1.17.2",
+>>>>>>> ad75674f1b9326e6c28773702400a62701593195
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -99,7 +128,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
+<<<<<<< HEAD
       "version": "3.0.16",
+=======
+      "version": "3.0.15",
+>>>>>>> ad75674f1b9326e6c28773702400a62701593195
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -138,7 +171,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
+<<<<<<< HEAD
       "version": "1.6.0",
+=======
+      "version": "1.4.2",
+>>>>>>> ad75674f1b9326e6c28773702400a62701593195
       "depth": 1,
       "source": "registry",
       "dependencies": {
