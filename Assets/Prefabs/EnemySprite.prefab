@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1500485267600754748}
   - component: {fileID: 1500485267600754746}
   - component: {fileID: 1500485267600754747}
-  - component: {fileID: 1500485267600754744}
   - component: {fileID: 1500485267600754745}
-  - component: {fileID: 6913953786473835351}
+  - component: {fileID: 593470643193021702}
+  - component: {fileID: 4542100340449300918}
   m_Layer: 0
   m_Name: EnemySprite
   m_TagString: Untagged
@@ -77,7 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,26 +110,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1500485267600754744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500485267600754749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0747e12b8c2ca0344b064b48303964c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetDestination: {fileID: 0}
-  targetGameobject: {fileID: 0}
-  targetCharacter: {fileID: 0}
-  speed: 100
-  minDist: 1
-  hp: 1000
-  damage: 100
-  exp_reward: 500
 --- !u!61 &1500485267600754745
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -155,7 +136,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6913953786473835351
+--- !u!114 &593470643193021702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,8 +145,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1500485267600754749}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c9ef10586944f544ad62e2e7d63b970, type: 3}
+  m_Script: {fileID: 11500000, guid: f404db1eefc4dc044bc304b3dcb84d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropItemPrefab: {fileID: 2528154891620596939, guid: ed49e17186c3afa42a78ba8a5e4eb2da, type: 3}
+  targetDestination: {fileID: 0}
+  targetGameobject: {fileID: 0}
+  targetCharacter: {fileID: 0}
+  speed: 100
+  hp: 1000
+  damage: 100
+  exp_reward: 500
+--- !u!114 &4542100340449300918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500485267600754749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3909e5acf47fe5245b1bcc4e1d776e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItemPrefab: {fileID: 2528154891620596939, guid: ed49e17186c3afa42a78ba8a5e4eb2da,
+    type: 3}
   chance: 1

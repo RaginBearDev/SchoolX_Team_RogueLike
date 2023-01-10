@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2528154891620596940}
   - component: {fileID: 2528154891620596941}
-  - component: {fileID: 2528154891620596942}
-  - component: {fileID: 2528154891620596943}
   - component: {fileID: 2528154891620596938}
+  - component: {fileID: 1706611031974468472}
+  - component: {fileID: 442691440824725995}
   m_Layer: 0
   m_Name: ExpGem
   m_TagString: Untagged
@@ -76,7 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
+    type: 3}
   m_Color: {r: 0.22530258, g: 0.32097086, b: 0.7830189, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,31 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2528154891620596942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2528154891620596939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78bfa5003da3d844090b7d8465528141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2528154891620596943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2528154891620596939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60248a6de83aa874baf6f1b62aa92d3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  expAmount: 500
 --- !u!58 &2528154891620596938
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -128,3 +104,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1706611031974468472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528154891620596939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8452443eb861dfd42829151c868facbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &442691440824725995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528154891620596939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305f94d10f3713040990c02c62d581d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expAmount: 500

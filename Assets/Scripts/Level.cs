@@ -7,6 +7,7 @@ public class Level : MonoBehaviour
     int level = 1;
     int exp = 0;
     [SerializeField] ExpBar expBar;
+    [SerializeField] Character character;
 
     int TO_LEVEL_UP{
         get{
@@ -29,6 +30,7 @@ public class Level : MonoBehaviour
             exp -= TO_LEVEL_UP;
             level += 1;
             expBar.SetLevelText(level);
+            character.Heal((int)(character.maxHp*0.25));
         }
     }
 

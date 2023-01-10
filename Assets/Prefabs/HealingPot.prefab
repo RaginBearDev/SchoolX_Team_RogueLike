@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6869411783935355245}
   - component: {fileID: 6869411783935355218}
-  - component: {fileID: 6869411783935355244}
-  - component: {fileID: 6869411783935355216}
   - component: {fileID: 6869411783935355219}
+  - component: {fileID: 7158329026231313632}
+  - component: {fileID: 7221014373115941906}
   m_Layer: 0
   m_Name: HealingPot
   m_TagString: Untagged
@@ -76,7 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
+    type: 3}
   m_Color: {r: 0.78431374, g: 0.22352938, b: 0.2669278, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,31 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6869411783935355244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6869411783935355217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78bfa5003da3d844090b7d8465528141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6869411783935355216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6869411783935355217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426a095faccad054f820c505c7525586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healAmount: 500
 --- !u!58 &6869411783935355219
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -128,3 +104,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7158329026231313632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869411783935355217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8452443eb861dfd42829151c868facbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7221014373115941906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869411783935355217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6f8212c052b1c48aa1c3c9310953ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healAmount: 500

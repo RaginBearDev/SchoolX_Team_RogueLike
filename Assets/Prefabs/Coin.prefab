@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3315800751564171253}
   - component: {fileID: 3315800751564171252}
   - component: {fileID: 3315800751564171251}
-  - component: {fileID: 3315800751564171254}
-  - component: {fileID: 3315800751564171255}
+  - component: {fileID: 9018289748024892278}
+  - component: {fileID: 2244142828153544500}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -76,7 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
+    type: 3}
   m_Color: {r: 0.8563576, g: 0.8584906, b: 0.2713154, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +104,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3315800751564171254
+--- !u!114 &9018289748024892278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,10 +113,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3315800751564171250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78bfa5003da3d844090b7d8465528141, type: 3}
+  m_Script: {fileID: 11500000, guid: 8452443eb861dfd42829151c868facbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3315800751564171255
+--- !u!114 &2244142828153544500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,7 +125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3315800751564171250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c694c05a7a4483a4e9862842a000fdfb, type: 3}
+  m_Script: {fileID: 11500000, guid: a81cdbb2be69b264189cc5472de7d465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 5
+  count: 100

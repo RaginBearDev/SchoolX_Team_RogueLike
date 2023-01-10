@@ -9,9 +9,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject targetGameobject;
     [SerializeField] Character targetCharacter;
 
-    [SerializeField] float speed = 10.0f;
+    [SerializeField] float speed = 100.0f;
     [SerializeField] int hp = 1000;
-    [SerializeField] int damage = 10;
+    [SerializeField] int damage = 100;
     [SerializeField] int exp_reward = 500;
 
 
