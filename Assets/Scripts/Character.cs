@@ -1,4 +1,4 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ public class Character : MonoBehaviour
 
     [SerializeField] float invincibleTime = 0.5f;
     [HideInInspector] public Level level;
-    [HideInInspector] public Coins coins;
+    [HideInInspector] public EuroDollars euroDollars;
     [HideInInspector] public bool isInvinsible;
 
     public float damageMult;
@@ -21,13 +21,13 @@ public class Character : MonoBehaviour
     //public float healthRegen;
     //public float lifesteel;
     
-    public StatusBar hpBar; 
+    public HealthBar hpBar; 
 
 
     private void Awake()
     {
         level = GetComponent<Level>();
-        coins = GetComponent<Coins>();
+        euroDollars = GetComponent<EuroDollars>();
     }
 
 

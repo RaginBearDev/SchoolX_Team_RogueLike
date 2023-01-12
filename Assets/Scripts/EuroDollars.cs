@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Coins : MonoBehaviour
+public class EuroDollars : MonoBehaviour
 {
     public int coinAcquired;
-    [SerializeField] TMPro.TextMeshProUGUI coinsCountText;
+    [SerializeField] Text coinsCountText;
 
 
     public void Add(int count)
     {
         coinAcquired += count;
-        coinsCountText.text = "Coins: " + coinAcquired.ToString();
+        coinsCountText.text = "$" + coinAcquired.ToString();
     }
 }

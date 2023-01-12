@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinPickUp : MonoBehaviour, IPickUpObject
+public class MoneyPickUp : MonoBehaviour, IPickUpObject
 {
     [SerializeField] int count;
 
-
     public void OnPickUp(Character character)
     {
-        character.coins.Add(count);
+        character.euroDollars.Add(count);
     }
 }

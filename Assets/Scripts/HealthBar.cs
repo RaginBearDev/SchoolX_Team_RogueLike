@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class StatusBar : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
     [SerializeField] Transform bar;
-    
     
     public void SetState(float currentHp, float maxHp ){
         
@@ -16,6 +16,5 @@ public class StatusBar : MonoBehaviour
             state = 0f;
         }
         bar.transform.localScale =  new Vector3(state, 1f, 1f);
-
     }
 }
