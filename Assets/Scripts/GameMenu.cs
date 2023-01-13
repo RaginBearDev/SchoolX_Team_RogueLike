@@ -37,6 +37,7 @@ public class GameMenu : MonoBehaviour
     }
 
     public void BackToMenu() {
+        pauseManager.UnpauseGame();
         SceneManager.LoadScene("MainMenu");
     }
 }
