@@ -7,6 +7,7 @@ public class Character : MonoBehaviour
     public float maxHp = 1000;
     public float currentHp = 1000;
     public int armor = 0;
+    public Transform leftHand, rightHand;
 
     float timer;
     private float lastHP;
