@@ -35,13 +35,13 @@ public class LoadGameController : MonoBehaviour
                 level.text = saves[i].characterLevel.ToString();
 
                 levelToLoad = saves[i].levelName;
+                saveController.SetSelectedSave(saves[i]);
                 save.onClick.AddListener(LoadLevel);
             } else {
                 usernameGameObject.SetActive(false);
                 levelGameObject.SetActive(false);
                 startNewGameObject.SetActive(true);
                 save.onClick.AddListener(ShowNewGameMenu);
-                
             }
         }
         
@@ -54,6 +54,5 @@ public class LoadGameController : MonoBehaviour
 
     private void LoadLevel() {
         SceneManager.LoadScene(levelToLoad);
-    
     }
 }

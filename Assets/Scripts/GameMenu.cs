@@ -10,6 +10,7 @@ public class GameMenu : MonoBehaviour
     [SerializeField] GameObject background;
     [SerializeField] PauseManager pauseManager;
     [SerializeField] GameObject playerStatsUI;
+    [SerializeField] SaveController saveController;
 
     void Update()
     {
@@ -38,6 +39,7 @@ public class GameMenu : MonoBehaviour
 
     public void BackToMenu() {
         pauseManager.UnpauseGame();
+        saveController.Save(SaveController.selectedSave);
         SceneManager.LoadScene("MainMenu");
     }
 }

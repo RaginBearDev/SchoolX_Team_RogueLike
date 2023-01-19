@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Level : MonoBehaviour
-{   
-    int level = 1;
-    int exp = 0;
-    [SerializeField] ExpBar expBar;
+{   [SerializeField] ExpBar expBar;
     [SerializeField] Character character;
+
+    private int level;
+    private int exp;
+
+    public Level(int userLevel, int userExp)
+    {
+        level = userLevel;
+        exp = userExp;
+    }
 
     int TO_LEVEL_UP{
         get{
