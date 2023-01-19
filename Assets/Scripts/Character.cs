@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public HealthBar hpBar; 
+
     public float maxHp = 1000;
     public float currentHp = 1000;
     public int armor = 0;
@@ -16,13 +17,11 @@ public class Character : MonoBehaviour
     //public float pickupRange;
     //public float healthRegen;
     //public float lifesteel;
-    private float lastHP;
-    float timer;
 
     [SerializeField] float invincibleTime = 0.5f;
 
     [SerializeField] SaveController saveController;
-    [HideInInspector] public Level level = SaveController.selectedSave.characterLevel;
+    [HideInInspector] public Level level;
     [HideInInspector] public EuroDollars euroDollars;
     [HideInInspector] public bool isInvinsible;
 
@@ -78,7 +77,6 @@ public class Character : MonoBehaviour
 
     private void Update()
      {
-            
         if(lastHP != currentHp && isInvinsible == false)
         {
             isInvinsible = true;
@@ -97,8 +95,6 @@ public class Character : MonoBehaviour
             currentHp = lastHP;
 
             hpBar.SetState(lastHP, maxHp);
-        }
-
-        saveController.UpdateCharacterSaveStats(level, euroDollars);
+        } 
      }
 }

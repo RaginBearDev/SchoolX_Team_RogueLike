@@ -18,6 +18,7 @@ public class LoadGameController : MonoBehaviour
 
     void Start() {
         SaveController.SaveData[] saves = saveController.Load();
+        Debug.Log(saves.Length);
             
         for (int i = 0; i < saves.Length; i++) {
             GameObject saveButton = savesWrapper.transform.GetChild(i).gameObject;
