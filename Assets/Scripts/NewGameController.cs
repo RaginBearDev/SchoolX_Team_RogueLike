@@ -12,8 +12,9 @@ public class NewGameController : MonoBehaviour
     public SaveController saveController;
 
     public void Init() {
-        SaveController.SaveData newSaveData = saveController.initSaveData(characterNameField.text, newGameLevel);
+        SaveController.SaveData newSaveData = saveController.InitSaveData(characterNameField.text, newGameLevel);
         saveController.Save(newSaveData);
+        saveController.SetSelectedSave(newSaveData);
         SceneManager.LoadScene(newGameLevel);
     }
 }

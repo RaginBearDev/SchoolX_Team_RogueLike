@@ -5,20 +5,32 @@ using System.IO;
 
 public class SaveController : MonoBehaviour
 {
+    public static SaveController Instance = null;
+    public static SaveData selectedSave;
+
+    void Awake() {
+        DontDestroyOnLoad(this.gameObject);
+        if (Instance == null) {
+            Instance = this;
+        } else if(Instance != null) {
+            Destroy(this.gameObject);
+        }
+    }
+
     public void Save(SaveData savedData) {
          string jsonString = JsonUtility.ToJson(savedData);
 
-        FileInfo[] filesInDirectory = getFilesinDirectory();
+        FileInfo[] filesInDirectory = GetFilesinDirectory();
         if (filesInDirectory.Length == 3) {
             File.Delete(filesInDirectory[2].FullName);
-            saveInFileSystem(jsonString, savedData.characterName);
+            SaveInFileSystem(jsonString, savedData.characterName);
         } else {
-            saveInFileSystem(jsonString, savedData.characterName);
+            SaveInFileSystem(jsonString, savedData.characterName);
         }
     }
 
     public SaveData[] Load() {
-        FileInfo[] filesInDirectory = getFilesinDirectory();
+        FileInfo[] filesInDirectory = GetFilesinDirectory();
         SaveData[] saves = new SaveData[3];
 
         int iteration = 0;  
@@ -35,9 +47,9 @@ public class SaveController : MonoBehaviour
         return saves;
     }
 
-    public SaveData initSaveData(string characterName, string startLevelName) {
+    public SaveData InitSaveData(string characterName, string startLevelName) {
         SaveData newSaveData = new SaveData();
-        newSaveData.characterLevel = 1;
+        newSaveData.characterLevel = new Level(1, 0);
         newSaveData.characterName = characterName;
         newSaveData.characterMoney = 0;
         newSaveData.levelName = startLevelName;
@@ -45,21 +57,29 @@ public class SaveController : MonoBehaviour
         return newSaveData;
     }
 
-    private FileInfo[] getFilesinDirectory() {
+    public void SetSelectedSave(SaveData save) {
+        selectedSave = save;
+    }
+
+    public void UpdateCharacterSaveStats(Level level, EuroDollars euroDollars) {
+        SaveController.selectedSave.characterLevel = level;
+        SaveController.selectedSave.characterMoney = euroDollars.coinAcquired;
+    }
+
+    private FileInfo[] GetFilesinDirectory() {
         DirectoryInfo directory = new DirectoryInfo(Application.dataPath + "/Saves");
         return directory.GetFiles("*.json");
     }
 
-    private void saveInFileSystem(string jsonString, string fileName) {
+    private void SaveInFileSystem(string jsonString, string fileName) {
         File.WriteAllText(Application.dataPath + "/Saves/" + fileName + ".json", jsonString);
     }
-
 
     [System.Serializable]
     public class SaveData {
         public string levelName;
         public string characterName;
-        public int characterLevel;
+        public Level characterLevel;
         public int characterMoney;
     }
 }
