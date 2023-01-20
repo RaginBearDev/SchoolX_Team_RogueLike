@@ -22,15 +22,13 @@ public class PickUpGun : MonoBehaviour
         {
             if(isRightHandFull)
             {
-                Debug.Log(isRightHandFull);
                 lastRightHandGun = rightHandGun.GetComponentInChildren<GunObject>().droppedGunPrefab;
                 rightHandGun = SwapGun(lastRightHandGun, character.rightHand, d, collision.gameObject.transform, rightHandGun);
                 rightHandGun.GetComponentInChildren<GunObject>().isRightHand = true;
                 rightHand.MagazineRender(rightHandGun.GetComponentInChildren<GunObject>().magazineSize, rightHandGun.GetComponentInChildren<GunObject>().magazineSize);
                 lastRightGunAmmo = rightHandGun.GetComponentInChildren<GunObject>().magazineSize;
                 Destroy(collision.gameObject);
-
-
+                Animate.gunId = d.gunId;
             }
             else
             {
@@ -40,7 +38,7 @@ public class PickUpGun : MonoBehaviour
                 rightHandGun.GetComponentInChildren<GunObject>().isRightHand = true;
                 isRightHandFull = true;
                 Destroy(collision.gameObject);
-
+                Animate.gunId = d.gunId;
                 //rightHand.MagazineRender(rightHandGun.GetComponentInChildren<GunObject>().magazineSize, rightHandGun.GetComponentInChildren<GunObject>().magazineSize);
                 //lastRightGunAmmo = rightHandGun.GetComponentInChildren<GunObject>().magazineSize;
             }
@@ -51,12 +49,13 @@ public class PickUpGun : MonoBehaviour
         {
             if(isLeftHandFull)
             {   
-                Debug.Log("swap");
                 leftHandGun = SwapGun(lastLeftHandGun, character.leftHand, d, collision.gameObject.transform, leftHandGun);
                 lastLeftHandGun = leftHandGun.GetComponentInChildren<GunObject>().droppedGunPrefab;
                 leftHandGun.GetComponentInChildren<GunObject>().isRightHand = false;
                 leftHand.MagazineRender(leftHandGun.GetComponentInChildren<GunObject>().magazineSize, leftHandGun.GetComponentInChildren<GunObject>().magazineSize);
                 lastLeftGunAmmo = leftHandGun.GetComponentInChildren<GunObject>().magazineSize;
+                Animate.gunId = d.gunId;
+
             }
             else
             {       
@@ -64,20 +63,21 @@ public class PickUpGun : MonoBehaviour
                 lastLeftHandGun = leftHandGun.GetComponentInChildren<GunObject>().droppedGunPrefab;
                 leftHandGun.GetComponentInChildren<GunObject>().isRightHand = false;
                 isLeftHandFull = true;
+                Animate.gunId = d.gunId;
                 //leftHand.MagazineRender(leftHandGun.GetComponentInChildren<GunObject>().magazineSize, leftHandGun.GetComponentInChildren<GunObject>().magazineSize);
                 //lastLeftGunAmmo = leftHandGun.GetComponentInChildren<GunObject>().magazineSize;
             }
         Destroy(collision.gameObject);
         }
-   }
+    }
 
 
-   private GameObject EquipGun(Transform hand, DroppedGun droppedGun)
-   {
+    private GameObject EquipGun(Transform hand, DroppedGun droppedGun)
+    {
         GameObject gun = Instantiate(droppedGun.equipedGunPrefab, hand.position, hand.rotation, hand);
         Rigidbody2D rb = gun.GetComponent<Rigidbody2D>();
         return gun;
-   }
+    }
 
     
     private GameObject SwapGun(GameObject equipedGun, Transform hand, DroppedGun droppedGun, Transform dgTransform, GameObject gunInHand)

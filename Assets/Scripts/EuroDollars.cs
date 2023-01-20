@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class EuroDollars : MonoBehaviour
 {
-    [HideInInspector] public int coinAcquired = SaveController.selectedSave.characterMoney;
     [SerializeField] Text coinsCountText;
-
+    private int coinAcquired = SaveController.selectedSave.characterMoney;
 
     public void Add(int count)
     {
-        coinAcquired += count;
+        coinAcquired += count; 
+    }
+
+    void Update()
+    {
+        SaveController.selectedSave.characterMoney = coinAcquired;
         coinsCountText.text = "$" + coinAcquired.ToString();
     }
 }

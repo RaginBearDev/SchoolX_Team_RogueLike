@@ -6,4 +6,5 @@ public class DroppedGun : MonoBehaviour
 {
     public GameObject equipedGunPrefab;
     public GameObject droppedGunPrefab;
+    public int gunId;
 }

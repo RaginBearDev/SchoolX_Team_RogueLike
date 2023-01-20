@@ -49,7 +49,8 @@ public class SaveController : MonoBehaviour
 
     public SaveData InitSaveData(string characterName, string startLevelName) {
         SaveData newSaveData = new SaveData();
-        newSaveData.characterLevel = new Level(1, 0);
+        newSaveData.characterLevel = 1;
+        newSaveData.characterExp = 0;
         newSaveData.characterName = characterName;
         newSaveData.characterMoney = 0;
         newSaveData.levelName = startLevelName;
@@ -59,11 +60,6 @@ public class SaveController : MonoBehaviour
 
     public void SetSelectedSave(SaveData save) {
         selectedSave = save;
-    }
-
-    public void UpdateCharacterSaveStats(Level level, EuroDollars euroDollars) {
-        SaveController.selectedSave.characterLevel = level;
-        SaveController.selectedSave.characterMoney = euroDollars.coinAcquired;
     }
 
     private FileInfo[] GetFilesinDirectory() {
@@ -79,7 +75,8 @@ public class SaveController : MonoBehaviour
     public class SaveData {
         public string levelName;
         public string characterName;
-        public Level characterLevel;
+        public int characterLevel;
+        public int characterExp;
         public int characterMoney;
     }
 }

@@ -2,19 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level : MonoBehaviour
-{   [SerializeField] ExpBar expBar;
+public class Level : MonoBehaviour {   
+    [SerializeField] ExpBar expBar;
     [SerializeField] Character character;
-
-    private int level;
-    private int exp;
-    private float hpMultiplier;
-
-    public Level(int userLevel, int userExp)
-    {
-        level = userLevel;
-        exp = userExp;
-    }
+    private int level = SaveController.selectedSave.characterLevel;
+    private int exp = SaveController.selectedSave.characterExp;
 
     int TO_LEVEL_UP{
         get{
@@ -47,5 +39,11 @@ public class Level : MonoBehaviour
     {
         expBar.UpdateExpSlider(exp, TO_LEVEL_UP);
         expBar.SetLevelText(level);
+    }
+
+    void Update()
+    {
+        SaveController.selectedSave.characterLevel = level;
+        SaveController.selectedSave.characterExp = exp;
     }
 }
