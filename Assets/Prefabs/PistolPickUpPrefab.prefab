@@ -115,6 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e049ce1cbbb3c4cb802d9e3086d198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipedGunPrefab: {fileID: 9180877726020970826, guid: ce2931a98552dff409d0a2595b5cb35d,
+  equipedGunPrefab: {fileID: 2823809411964735743, guid: 57476922f92dbc84e82ab5b3ef3a92ec,
     type: 3}
   droppedGunPrefab: {fileID: 6839337400989135266}

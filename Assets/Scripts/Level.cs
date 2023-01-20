@@ -8,6 +8,7 @@ public class Level : MonoBehaviour
 
     private int level;
     private int exp;
+    private float hpMultiplier;
 
     public Level(int userLevel, int userExp)
     {
@@ -37,6 +38,7 @@ public class Level : MonoBehaviour
             level += 1;
             expBar.SetLevelText(level);
             character.Heal((int)(character.maxHp*0.25));
+            character.maxHp += 1;
         }
     }
 
