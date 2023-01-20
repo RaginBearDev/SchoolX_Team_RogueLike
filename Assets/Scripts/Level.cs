@@ -30,6 +30,7 @@ public class Level : MonoBehaviour {
             level += 1;
             expBar.SetLevelText(level);
             character.Heal((int)(character.maxHp*0.25));
+            character.maxHp += 1;
         }
     }
 

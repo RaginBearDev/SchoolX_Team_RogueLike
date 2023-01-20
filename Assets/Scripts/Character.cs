@@ -12,11 +12,12 @@ public class Character : MonoBehaviour
     public Transform leftHand, rightHand;
     public float damageMult;
   
-    float timer;
+    private float timer;
     private float lastHP;
     //public float pickupRange;
     //public float healthRegen;
     //public float lifesteel;
+
 
     [SerializeField] float invincibleTime = 0.5f;
 
@@ -52,7 +53,6 @@ public class Character : MonoBehaviour
         {
             damage = 0;
         }
-
     }
 
 
