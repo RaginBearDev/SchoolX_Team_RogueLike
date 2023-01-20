@@ -1194,7 +1194,7 @@ PrefabInstance:
     - target: {fileID: 649994129084271753, guid: 68de516d6d4c9a743ace14f3efbf1249,
         type: 3}
       propertyPath: gunId
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6839337400989135266, guid: 68de516d6d4c9a743ace14f3efbf1249,
         type: 3}
