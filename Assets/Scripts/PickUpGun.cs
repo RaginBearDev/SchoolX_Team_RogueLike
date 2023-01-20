@@ -34,14 +34,14 @@ public class PickUpGun : MonoBehaviour
             if(isLeftHandFull)
             {   
                 leftHandGun = SwapGun(lastLeftHandGun, character.leftHand, d, collision.gameObject.transform);
-                Animate.gunId = d.gunId;
+                MainCharacterAnimationController.gunId = d.gunId;
             }
             else
             {       
                 GameObject leftHandGun = EquipGun(character.leftHand, d);
                 GameObject lastLeftHandGun = d.droppedGunPrefab;
                 isLeftHandFull = true;
-                Animate.gunId = d.gunId;
+                MainCharacterAnimationController.gunId = d.gunId;
             }
             Destroy(collision.gameObject);
         }

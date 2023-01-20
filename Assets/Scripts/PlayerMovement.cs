@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 10;
     public  Camera cam;
     
-    Animate animate;
+    MainCharacterAnimationController animate;
     Transform vectorMove;
 
     [HideInInspector]
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         vectorMove = GetComponent<Transform>();
-        animate = GetComponent<Animate>();
+        animate = GetComponent<MainCharacterAnimationController>();
 
         lastHorizontalVector = -1f;
         lastVerticalVector = 1f;

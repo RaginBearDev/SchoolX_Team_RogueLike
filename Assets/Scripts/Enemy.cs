@@ -14,7 +14,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] int damage = 100;
     [SerializeField] int exp_reward = 500;
 
-
     void Start() 
     {
         rgbd2d = GetComponent<Rigidbody2D>();
@@ -39,7 +38,10 @@ public class Enemy : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 direction =  (targetDestination.position - transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rgbd2d.rotation = angle;
         rgbd2d.velocity = direction * speed * Time.fixedDeltaTime;
+        
     }
 
 
