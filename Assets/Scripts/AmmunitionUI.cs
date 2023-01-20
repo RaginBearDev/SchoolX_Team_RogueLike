@@ -11,7 +11,8 @@ public class AmmunitionUI : MonoBehaviour
 
     public void MagazineRender(int bulletRemaining, int magazineSize)
     {
-         if(isRightHanded)
+        Debug.Log("1111");
+        if(isRightHanded)
         {
             rightHandGunAmmoText.text = bulletRemaining.ToString() + "|" + magazineSize.ToString(); 
         }

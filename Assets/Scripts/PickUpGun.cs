@@ -18,56 +18,30 @@ public class PickUpGun : MonoBehaviour
     {
         DroppedGun d = collision.GetComponent<DroppedGun>();
         
-        if(d != null && Input.GetKey(KeyCode.V))
-        {
-            if(isRightHandFull)
-            {
-                lastRightHandGun = rightHandGun.GetComponentInChildren<GunObject>().droppedGunPrefab;
-                rightHandGun = SwapGun(lastRightHandGun, character.rightHand, d, collision.gameObject.transform, rightHandGun);
-                rightHandGun.GetComponentInChildren<GunObject>().isRightHand = true;
-                rightHand.MagazineRender(rightHandGun.GetComponentInChildren<GunObject>().magazineSize, rightHandGun.GetComponentInChildren<GunObject>().magazineSize);
-                lastRightGunAmmo = rightHandGun.GetComponentInChildren<GunObject>().magazineSize;
-                Destroy(collision.gameObject);
-                Animate.gunId = d.gunId;
-            }
-            else
-            {
-                Debug.Log("PickUp");
-                rightHandGun = EquipGun(character.rightHand, d);
-                lastRightHandGun = rightHandGun.GetComponentInChildren<GunObject>().droppedGunPrefab;
-                rightHandGun.GetComponentInChildren<GunObject>().isRightHand = true;
-                isRightHandFull = true;
-                Destroy(collision.gameObject);
-                Animate.gunId = d.gunId;
-                //rightHand.MagazineRender(rightHandGun.GetComponentInChildren<GunObject>().magazineSize, rightHandGun.GetComponentInChildren<GunObject>().magazineSize);
-                //lastRightGunAmmo = rightHandGun.GetComponentInChildren<GunObject>().magazineSize;
-            }
-
-        }
-        
-        else if(d != null && Input.GetKey(KeyCode.C))
+        if(d != null && Input.GetKey(KeyCode.C))
         {
             if(isLeftHandFull)
             {   
                 leftHandGun = SwapGun(lastLeftHandGun, character.leftHand, d, collision.gameObject.transform, leftHandGun);
                 lastLeftHandGun = leftHandGun.GetComponentInChildren<GunObject>().droppedGunPrefab;
                 leftHandGun.GetComponentInChildren<GunObject>().isRightHand = false;
+                Animate.gunId = leftHandGun.GetComponentInChildren<GunObject>().gunID;
                 leftHand.MagazineRender(leftHandGun.GetComponentInChildren<GunObject>().magazineSize, leftHandGun.GetComponentInChildren<GunObject>().magazineSize);
                 lastLeftGunAmmo = leftHandGun.GetComponentInChildren<GunObject>().magazineSize;
-                Animate.gunId = d.gunId;
+
 
             }
             else
-            {       
+            {   
                 leftHandGun = EquipGun(character.leftHand, d);
                 lastLeftHandGun = leftHandGun.GetComponentInChildren<GunObject>().droppedGunPrefab;
                 leftHandGun.GetComponentInChildren<GunObject>().isRightHand = false;
                 isLeftHandFull = true;
-                Animate.gunId = d.gunId;
-                //leftHand.MagazineRender(leftHandGun.GetComponentInChildren<GunObject>().magazineSize, leftHandGun.GetComponentInChildren<GunObject>().magazineSize);
-                //lastLeftGunAmmo = leftHandGun.GetComponentInChildren<GunObject>().magazineSize;
+                Animate.gunId = leftHandGun.GetComponentInChildren<GunObject>().gunID;
+                leftHand.MagazineRender(leftHandGun.GetComponentInChildren<GunObject>().magazineSize, leftHandGun.GetComponentInChildren<GunObject>().magazineSize);
+                lastLeftGunAmmo = leftHandGun.GetComponentInChildren<GunObject>().magazineSize;
             }
-        Destroy(collision.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 
@@ -90,7 +64,10 @@ public class PickUpGun : MonoBehaviour
 
     private void Update() 
     {
-        rightHand.MagazineRender(rightHandGun.GetComponentInChildren<GunObject>().bulletRemaining, rightHandGun.GetComponentInChildren<GunObject>().magazineSize);
+        //rightHand.MagazineRender(rightHandGun.GetComponentInChildren<GunObject>().bulletRemaining, rightHandGun.GetComponentInChildren<GunObject>().magazineSize);
+        if(isLeftHandFull)
+        {
         leftHand.MagazineRender(leftHandGun.GetComponentInChildren<GunObject>().bulletRemaining, leftHandGun.GetComponentInChildren<GunObject>().magazineSize);
+        }
     }
 }

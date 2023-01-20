@@ -20,6 +20,7 @@ public class GunObject : MonoBehaviour
     private float reloadTimer;
     private bool isReloading = false;
     [HideInInspector] public bool isRightHand;
+    public int gunID;
 
 
 
