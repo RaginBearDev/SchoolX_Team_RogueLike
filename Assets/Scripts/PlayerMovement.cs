@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         vectorMove.Translate(movement * speed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rgbd2d.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 0f;
         rgbd2d.rotation = angle;
         
         if (movement.x == 0 && movement.y == 0) {

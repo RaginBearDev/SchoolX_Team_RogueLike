@@ -34,24 +34,26 @@ public class PickUpGun : MonoBehaviour
             if(isLeftHandFull)
             {   
                 leftHandGun = SwapGun(lastLeftHandGun, character.leftHand, d, collision.gameObject.transform);
+                Animate.gunId = d.gunId;
             }
             else
             {       
                 GameObject leftHandGun = EquipGun(character.leftHand, d);
                 GameObject lastLeftHandGun = d.droppedGunPrefab;
                 isLeftHandFull = true;
+                Animate.gunId = d.gunId;
             }
             Destroy(collision.gameObject);
         }
-   }
+    }
 
 
-   private GameObject EquipGun(Transform hand, DroppedGun droppedGun)
-   {
+    private GameObject EquipGun(Transform hand, DroppedGun droppedGun)
+    {
         GameObject gun = Instantiate(droppedGun.equipedGunPrefab, hand.position, hand.rotation, hand);
         Rigidbody2D rb = gun.GetComponent<Rigidbody2D>();
         return gun;
-   }
+    }
 
     
     private GameObject SwapGun(GameObject equipedGun, Transform hand, DroppedGun droppedGun, Transform dgTransform)
