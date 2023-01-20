@@ -101,10 +101,15 @@ MonoBehaviour:
   firePoint: {fileID: 3343041804030094896}
   bulletPrefab: {fileID: 3190839969795752082, guid: fc2ae94c8ff1e504c813f12a18aa52c4,
     type: 3}
-  droppedGunPrefab: {fileID: 6839337400989135266, guid: 68de516d6d4c9a743ace14f3efbf1249,
+  droppedGunPrefab: {fileID: 9114615991739259870, guid: 67f14dadfff1d50b286712996d92aa90,
     type: 3}
   bulletForce: 20
   fireRate: 0.25
+  magazineSize: 30
+  bulletRemaining: 30
+  reloadDuration: 1
+  isRightHand: 0
+  gunID: 2
 --- !u!1 &3343041804030094897
 GameObject:
   m_ObjectHideFlags: 0
