@@ -28,8 +28,6 @@ public class PickUpGun : MonoBehaviour
                 MainCharacterAnimationController.gunId = leftHandGun.GetComponentInChildren<GunObject>().gunID;
                 leftHand.MagazineRender(leftHandGun.GetComponentInChildren<GunObject>().magazineSize, leftHandGun.GetComponentInChildren<GunObject>().magazineSize);
                 lastLeftGunAmmo = leftHandGun.GetComponentInChildren<GunObject>().magazineSize;
-
-
             }
             else
             {   
@@ -62,7 +60,7 @@ public class PickUpGun : MonoBehaviour
         return EquipGun(hand, droppedGun);
     }
 
-    private void Update() 
+    void Update() 
     {
         //rightHand.MagazineRender(rightHandGun.GetComponentInChildren<GunObject>().bulletRemaining, rightHandGun.GetComponentInChildren<GunObject>().magazineSize);
         if(isLeftHandFull)

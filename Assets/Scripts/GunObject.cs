@@ -13,16 +13,15 @@ public class GunObject : MonoBehaviour
 
     [SerializeField] float bulletForce = 20f;
     [SerializeField] float fireRate = 1f;
+    [SerializeField] float reloadDuration = 1f;
+    [HideInInspector] public bool isRightHand;
+
     public int magazineSize;
     public int bulletRemaining = 12;
-    [SerializeField] float reloadDuration = 1f;
     private float shootingTimer;
     private float reloadTimer;
     private bool isReloading = false;
-    [HideInInspector] public bool isRightHand;
     public int gunID;
-
-
 
     void Start()
     {
@@ -59,7 +58,7 @@ public class GunObject : MonoBehaviour
             reloadTimer = 0;
             isReloading = false;
             Reload();
-        } 
+        }
     }
 
 
